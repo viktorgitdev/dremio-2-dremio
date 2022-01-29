@@ -109,7 +109,7 @@ public class DremioConf extends AbstractArpConf<DremioConf> {
   private CloseableDataSource newDataSource() {
     final Properties properties = new Properties();
     //Omit catalog(s)
-    properties.setProperty("TABLE_CAT", "null");
+    //properties.setProperty("supports_catalogs", "false");
 
   return DataSources.newGenericConnectionPoolDataSource(
     DRIVER,
